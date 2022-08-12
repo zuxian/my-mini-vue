@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h2>{{person.name}}--{{person.age}}</h2>
+        <p>{{msg}}</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <div v-text="msg"></div>
+        <a v-bind:href="bindmsg">百度</a>
+        <div v-html="htmlStr"></div>
+        <input type="text" v-model='msg'>
+        <button v-on:click='handleClick'>点击</button>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                person: {
+                    name: '张三',
+                    age: 30
+                },
+                msg: '实现代码编译',
+                bindmsg: 'www.baidu.com',
+                htmlStr: '<div>我是v-html渲染</div>'
+            },
+            methods:{
+                handleClick(){
+                    console.log(555)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
