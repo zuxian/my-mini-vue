@@ -1,4 +1,3 @@
-// https://juejin.cn/post/7068532458349658119
 class Dep {
     constructor(val) {
       this.effects = new Set()
