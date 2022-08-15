@@ -1,4 +1,18 @@
 
+###  Dep
+
+Dep提供了几个接口：
+
+addSub: 接收的参数为Watcher实例，并把Watcher实例存入记录依赖的数组中
+removeSub: 与addSub对应，作用是将Watcher实例从记录依赖的数组中移除
+
+depend: Dep.target上存放这当前需要操作的Watcher实例，调用depend会调用该Watcher实例的addDep方法，addDep的功能可以看下面对Watcher的介绍
+
+notify: 通知依赖数组中所有的watcher进行更新操作
+
+
+
+### reactive 
 
 在vue3中reactive使用Proxy来代理对象实现响应式。首先明确代码中的几个概念：
 

@@ -18,12 +18,12 @@ export function compileToFunctions(template) {
 }
 
 
-// const outHtml = `<ul class="ul-box"><li class="li-item">1</li><li class="li-item" style="color: red;">2</li></ul>`
+const outHtml = `<ul class="ul-box"><li class="li-item">1</li><li class="li-item" style="color: red;">2</li></ul>`
 
-// let render1 = compileToFunctions(outHtml)
-// let realElement = createDom(render1);
+let render1 = compileToFunctions(outHtml)
+let realElement = createDom(render1);
 
-// document.getElementById("app").appendChild(realElement);
+document.getElementById("app").appendChild(realElement);
 
 
 

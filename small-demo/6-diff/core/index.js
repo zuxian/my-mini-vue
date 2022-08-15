@@ -27,3 +27,8 @@ export function createApp(rootComponent) {
     }
   }
 }
+
+// 在createApp的mount()阶段，通过维护一个标志位来判断是否是初始化，是就执行mountElement()，不是就执行diff()。
+// 需要注意：不管是不是初始化，都把这一次的VNode保存下来，作为一下次diff()操作的老的VNode
+
+// 浏览器打印  state.count++

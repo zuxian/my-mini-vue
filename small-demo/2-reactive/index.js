@@ -22,8 +22,10 @@ class Dep {
 }
 
 let targetMap = new Map()
-export function reactive(raw) {
-  // target是对象，key是对象的key; targetMap是以对象为key，depsMap为值的Map; depsMap是以对象的key为key，dep实例为值的Map
+function reactive(raw) {
+  // target是对象，key是对象的key; 
+  // targetMap是以对象为key，depsMap为值的Map; 
+  // depsMap是以对象的key为key，dep实例为值的Map
   const getDep = (target, key) => {
     // 先以对象为key获取targetMap上存储的depsMap
     let depsMap = targetMap.get(target)
@@ -39,6 +41,8 @@ export function reactive(raw) {
       dep = new Dep()
       depsMap.set(key, dep)
     }
+    console.log('--depsMap----', depsMap)
+    console.log('--targetMap----', targetMap)
     return dep
   }
   return new Proxy(raw, {
@@ -49,9 +53,7 @@ export function reactive(raw) {
     },
     set(target, key, value) {
       const dep = getDep(target, key)
-
       console.log(key, '---Proxy---dep---', dep)
-
       const result = Reflect.set(target, key, value)
       dep.notice()          // 在setter中 通知更新
       return result

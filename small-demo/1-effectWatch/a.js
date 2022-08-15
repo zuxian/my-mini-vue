@@ -21,7 +21,7 @@
 //     console.log(b)
 // }
 // update()
-// b = 20
+// a = 20
 // update()
 
 

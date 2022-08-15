@@ -7,7 +7,7 @@ import { patch } from './patch.js'
 //         <li class="li-item">1</li>
 //         <li class="li-item">2</li>
 //         <li class="li-item">3</li>
-//     </ul>
+//  </ul>
 
 // 假设我们有如上的DOM结构, 那我我们就可以利用虚拟DOM模拟出一个类似的DOM树结构
 export const VDOM = createElement("ul", { class: "ul-wrap" }, [

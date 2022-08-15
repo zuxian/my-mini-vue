@@ -4,16 +4,16 @@
 
 ##  Vue源码学习
 
+以简单的js代码实现一些功能，比如：ref、reactivity、render、diff、virtualDOM、compiler、eventBus、nextTick。
 
-以最简单的代码实现一些功能，最后将这些小功能串起来，
-
-最后加上打包，实现一个属于自己的简易版Vue框架。
+最后将这些小Demo串起来，实现一个属于自己的简易版Vue框架。
 
 
 small-demo文件夹包含如下文件夹：
 
 - 1-effectWatch   初步实现Dep和effectWatch，类似Vue3的ref API
 - 2-reactivity    实现reactive API
+- 3-watch-observer
 - 4-setup-render 初步实现setup与render
 - 5-render-mountElement  h函数、render函数、挂载Dom
 - 6-diff         虚拟Dom入门版
@@ -29,6 +29,11 @@ small-demo文件夹包含如下文件夹：
 
 
 ## 组合简易版Vue框架
+
+![vue](https://img.kancloud.cn/9d/94/9d94be5e4435017e6af85d0e322d4fd3_764x393.png)
+
+
+
 
 *src文件夹*
 
